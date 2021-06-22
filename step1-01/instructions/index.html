@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EXP Bootcamp - Install Libraries</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      hr {
+        margin: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <h2><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Document_metadata">Setup</a></h2>
+      <div>
+        Download and install:
+        <ol>
+          <li>Node.js (includes npm):</li>
+          <ul>
+            <li><a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/ </a></li>
+          </ul>
+          <li>Python 2.7 (find the latest 2.7 release)</li>
+          <ul>
+            <li><a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a> </li>
+            <li>If Python 3 is also installed run <pre>npm config set python C:\Python27\python.exe</pre></li>
+          </ul>
+          <li>Visual Studio 2017 or Build Tools for Visual Studio 2017</li>
+          <ul>
+            <li><a href="https://my.visualstudio.com/Downloads">https://my.visualstudio.com/Downloads</a></li>
+            <li>If using Build Tools, include the Visual C++ build tools workload and the optional Windows 10 SDK package.</li>
+            <li>If Visual Studio 2019 is installed run <pre>npm config set msvs_version 2017</pre></li>
+          </ul>
+        <li>install 'vsts-npm-auth' and authenticate to ADO artifacts for npm packages:</li>
+          <ul>
+            <li><pre>npm install vsts-npm-auth -g --registry https://registry.npmjs.com</pre></li>
+            <li><pre>vsts-npm-auth -config .npmrc</pre></li>
+          </ul>
+        <li>install yarn:</li>
+          <ul>
+            <li><pre>npm install yarn -g</pre></li>
+            <li>Read more about Yarn specific commands.</li>
+            <li><a href="https://dev.azure.com/experimentation/Analysis%20and%20Experimentation/_wiki/wikis/AnE.wiki/5529/Yarn">https://dev.azure.com/experimentation/Analysis%20and%20Experimentation/_wiki/wikis/AnE.wiki/5529/Yarn</a></li>
+          </ul>
+  
+        <li>install lerna:</li>
+        <ul>
+          <li><pre>npm install lerna -g</pre></li>
+          <li>Read more about Library Development (Lerna) specific commands.</li>
+          <li><a href="https://dev.azure.com/experimentation/Analysis%20and%20Experimentation/_wiki/wikis/AnE.wiki/5518/Library-Development">https://dev.azure.com/experimentation/Analysis%20and%20Experimentation/_wiki/wikis/AnE.wiki/5518/Library-Development</a></li>
+        </ul>
+      </ol>
+      </div>
+    </section>
+    <hr />
+
+    <section>
+      <h2><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning">Open Workspace</a></h2>
+      <div>
+        In VSCode, select File > Open Workspace selecting the workspace file located in the ExperimentationUI repo /.vscode/ExperimentationUI.code-workspace
+      </div>
+    </section>
+    <hr />
+    <section>
+      <h2><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Text_content">Installation</a></h2>
+      <div>
+        install dependencies:
+        <ul>
+          <li>yarn bootstrap</li>
+          <ul>
+            <li>This installs all project dependencies using yarn and runs Lerna commands to bootstrap and link local packages.</li>
+            <li>Note: do not run previous npm commands such as npm ci as the dependency management is being handled by yarn</li>
+          </ul>
+        </ul>
+      </div>
+      </pre>
+    </section>
+    <hr />
+  </body>
+</html>
