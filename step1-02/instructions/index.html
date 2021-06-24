@@ -13,16 +13,35 @@
 
   <body>
     <section>
-      <h2><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Document_metadata">Setup</a></h2>
+      <h2><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Document_metadata">Build</a></h2>
       <div>
+        You can build the UX locally in a few different ways, each with pros and cons. The bullet points below will describe them. <br />
         Build the UX:
         <ul>
-          <li>running yarn start from the root directory will build all libraries and run the entire studio UX</li>
-          <li>
-            to speed up the development process, navigate to a specific app-module, run yarn lib in that directory, and yarn start to build
-            only that app-module
-          </li>
-          <li>check this troubleshooting page if you have any errors with the build</li>
+          <li>Run <code>yarn start</code> in the root directory</li>
+          <ul>
+            <li>
+              This method will build the entire Studio UX, but it will also build ALL libraries beforehand, making it quite inefficient. You
+              should avoid using this.
+            </li>
+          </ul>
+          <li>Run <code>yarn start</code> in a specific app-module directory.</li>
+          <ul>
+            <li>
+              This method will build only the app-module of the directory you are in. This is the most efficient way to develop and build
+              one app-module.
+            </li>
+          </ul>
+          <li>Run <code>yarn start</code> in the <code>/apps/exp-studio</code> directory.</li>
+          <ul>
+            <li>This will build the entire Studio UX and is the most efficient way to do so.</li>
+          </ul>
+          <li>Run <code>yarn start</code> in the <code>/apps/experimentation-ui</code> directory.</li>
+          <ul>
+            <li>This will build the entire Control Tower UX and is the most efficient way to do so.</li>
+          </ul>
+          <li>Try navigating to each of these directories in your VSCode terminal and running <code>yarn start</code> to test it out.</li>
+          <li>Check this troubleshooting page if you have any errors with the build.</li>
           <ul>
             <li>
               <a href="https://dev.azure.com/experimentation/Analysis%20and%20Experimentation/_wiki/wikis/AnE.wiki/5527/Troubleshooting"
