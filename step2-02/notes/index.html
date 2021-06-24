@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EXP Bootcamp - app-module template</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      hr {
+        margin: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <h2><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Document_metadata">Setup</a></h2>
+      <div>
+        <h3>An App Module is comprised of two primary directories.</h3>
+        <ul>
+          <li>src/</li> 
+          <ul>
+            <li>app/</li>
+            <li>module/</li>
+          </ul>
+        </ul>
+      **Note:** The `app/` directory contains the scaffolding for a lightweight app for local development and does not include files that will be integrated with the experimentation-ui app.
+
+      <h3>Module Directory</h3>
+      Use the [_sample](https://dev.azure.com/experimentation/Analysis%20and%20Experimentation/_git/ExperimentationUI?path=%2Fapp-modules%2F_sample) app module as a reference<br>
+      Otherwise the [feature app module](https://dev.azure.com/experimentation/Analysis%20and%20Experimentation/_git/ExperimentationUI?path=%2Fapp-modules%2Ffeature) follows the latest coding standards
+
+      <ul>
+        <li>module/</li>
+        <ul>
+          <li>routes.tsx</li>
+          <li>epics.ts `- module root epic (redux middleware)`</li>
+          <li>reducers.ts `- module root reducer (redux store state)`</li>
+          <li>views/ `- individual views usually associated with a specific route`</li>
+        </ul>
+      </ul>
+
+      <h3>Views</h3>
+      <ul>
+        <li>common</li>
+        <ul>
+          <li>components</li>
+          <li>models (consider using to exp-data)</li>
+          <li>...</li>
+        </ul>
+  
+        <li>ViewName/</li>
+          <ul>
+            <li>components/</li>
+            <ul>
+              <li>ComponentName/</li>
+                <ul>
+                  <li>\_\_tests\_\_\/</li>
+                  <ul>
+                    <li>ComponentName.spec.tsx</li>
+                  </ul>
+                  <li>ComponentNameContainer.tsx (TODO provide finalized example of redux connected component)</li>
+                  <li>ComponentName.tsx</li>
+                  <li>ComponentName.types.ts</li>
+                  <li>ComponentName.constants.ts</li>
+                  <li>ComponentName.ducks.ts</li>
+                  <li>ComponentName.epics.ts</li>
+                  <li>...</li>
+                </ul>
+            </ul>
+              
+            <li>\_\_tests\_\_\/</li>
+              <ul>
+                <li>Layout.spec.tsx</li>
+              </ul>
+            <li>Layout.tsx</li>
+          </ul>
+        </ul>
+
+      </div>
+      </pre>
+    </section>
+    <hr />
+  </body>
+</html>
