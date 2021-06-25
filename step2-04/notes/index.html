@@ -18,19 +18,26 @@
         Steps to add an API call to an app-module
         <ol>
           <li>
-            Find the endpoint of the API call, and search the /exp-data/resources folder for existing Resource files that hit that endpoint.
+            Find the endpoint of the API call, and search the <code>common/exp-data/src/resources</code> folder for existing Resource files
+            that hit that endpoint.
           </li>
           <ul>
             <li>If there's an existing resource file with the endpoint, you will add the API call there.</li>
             <li>If not, you will need to create a new resource file.</li>
+            <li>Model this resource file after existing resources. Define the API call according to the swagger specifications.</li>
           </ul>
+          <li>
+            Define a data structure in the resource file for the input & output payload of the API if more than one data type is needed.
+          </li>
+          <li>Add an epic reducer in the .ducks file that imports the resource and calls the API.</li>
+          <li>Combine the epic into the root epic in the .epics file.</li>
+          <li>The API call will now be made whenever the reducer is triggered.</li>
         </ol>
       </div>
       <hr />
       <h2>Sample PR</h2>
       <div>
         <ul>
-          <li>Sample PRs</li>
           Sample PRs for adding API calls to app-modules.
           <li>
             <a href="https://experimentation.visualstudio.com/Analysis%20and%20Experimentation/_git/ExperimentationUI/pullrequest/93631"
