@@ -29,57 +29,36 @@
             <li> but you can find instructions on installing the required version here: </li>`    
               <li> https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=net60</li>
           </ul>
-          <li>Visual Studio 2017 or Build Tools for Visual Studio 2017</li>
+          <li>Visual Studio 2019</li>
           <ul>
             <li><a href="https://my.visualstudio.com/Downloads">https://my.visualstudio.com/Downloads</a></li>
             <li>If using Build Tools, include the Visual C++ build tools workload and the optional Windows 10 SDK package.</li>
             <li>If Visual Studio 2019 is installed run <pre>npm config set msvs_version 2017</pre></li>
           </ul>
-        <li>Clone the codebase</li>
-          <ul>
-            <li><a href="https://experimentation.visualstudio.com/Analysis%20and%20Experimentation/_git/AnE.ExP.ConsumptionWebJobs?version=GBmaster">https://experimentation.visualstudio.com/Analysis%20and%20Experimentation/_git/AnE.ExP.ConsumptionWebJobs?version=GBmaster</a></li>
-            <li>It is also possible to clone directly to Visual Studio using the following:</li>
-            <li><a href="vsweb://vs/?Product=Visual_Studio&EncFormat=UTF8&tfslink=dnN0ZnM6Ly8vRnJhbWV3b3JrL1RlYW1Qcm9qZWN0LzIxZmE1ZmJkLTFiYzgtNGRjNS1hNDIxLTc3YmM4MWZhYzgzMT91cmw9aHR0cHM6Ly9leHBlcmltZW50YXRpb24udmlzdWFsc3R1ZGlvLmNvbS8mcHJvamVjdD0yMWZhNWZiZC0xYmM4LTRkYzUtYTQyMS03N2JjODFmYWM4MzEmcmVwbz00MmVjMTUzMy0xN2Y0LTRlMDEtODIxNC1hN2FhMjI3MzEwNWU=">Clone to Visual Studio</a></li>
-          </ul>
-        <li>install 'vsts-npm-auth' and authenticate to ADO artifacts for npm packages:</li>
-          <ul>
-            <li><pre>npm install vsts-npm-auth -g --registry https://registry.npmjs.com</pre></li>
-            <li><pre>vsts-npm-auth -config .npmrc</pre></li>
-          </ul>
-        <li>install yarn:</li>
-          <ul>
-            <li><pre>npm install yarn -g</pre></li>
-            <li>Read more about Yarn specific commands.</li>
-            <li><a href="https://dev.azure.com/experimentation/Analysis%20and%20Experimentation/_wiki/wikis/AnE.wiki/5529/Yarn">https://dev.azure.com/experimentation/Analysis%20and%20Experimentation/_wiki/wikis/AnE.wiki/5529/Yarn</a></li>
-          </ul>
-  
-        <li>install lerna:</li>
-        <ul>
-          <li><pre>npm install lerna -g</pre></li>
-          <li>Read more about Library Development (Lerna) specific commands.</li>
-          <li><a href="https://dev.azure.com/experimentation/Analysis%20and%20Experimentation/_wiki/wikis/AnE.wiki/5518/Library-Development">https://dev.azure.com/experimentation/Analysis%20and%20Experimentation/_wiki/wikis/AnE.wiki/5518/Library-Development</a></li>
-        </ul>
       </ol>
       </div>
     </section>
     <hr />
 
     <section>
-      <h2>Open Workspace</h2>
+      <h2>Get App Configuration</h2>
       <div>
-        In VSCode, select File > Open Workspace selecting the workspace file located in the ExperimentationUI repo /.vscode/ExperimentationUI.code-workspace
+       The first step to getting the app configuration is getting JIT for the associated azure subscription 
+       with the App Service / Web Job. 
+       For Consumption that will be ConsumptionRestService AME Subscription.
       </div>
     </section>
     <hr />
     <section>
-      <h2>Installation</h2>
+      <h2>Getting ready to setup</h2>
       <div>
-        install dependencies:
+        Procuruing the PPE Config
         <ul>
-          <li>yarn bootstrap</li>
+          <li></li>
           <ul>
-            <li>This installs all project dependencies using yarn and runs Lerna commands to bootstrap and link local packages.</li>
-            <li>Note: do not run previous npm commands such as npm ci as the dependency management is being handled by yarn</li>
+            <li>Navigate to the debug console for the ppe web jobs from Edge Browser: https://consumption-jobs-ame.scm.azurewebsites.net/DebugConsole</li>
+            <li>Navigate to: site\wwwroot\app_data\jobs[continuous or triggered][Webjob You are trying to test]
+              And copy the [Webjob].exe.config file. Paste this file to your App.config file of the webjob you are trying to test.</li>
           </ul>
         </ul>
       </div>

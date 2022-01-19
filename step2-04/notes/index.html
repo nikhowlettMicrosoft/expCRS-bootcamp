@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EXP Bootcamp - Adding API</title>
+    <title>EXP Bootcamp - Receiving Data In PPE Environment</title>
     <link rel="stylesheet" href="./style.css" />
 
     <style>
@@ -13,40 +13,43 @@
 
   <body>
     <section>
-      <h2>Add API Call</h2>
+      <h2>Send a Service Bus Message</h2>
       <div>
-        Steps to add an API call to an app-module
+        Steps to send data to our Web Jobs
         <ol>
           <li>
-            Find the endpoint of the API call, and search the <code>common/exp-data/src/resources</code> folder for existing Resource files
-            that hit that endpoint.
+            First we will need a Visual Studio Solution to fire scorecard events.
+            The repo is linked below.
+            
           </li>
           <ul>
-            <li>If there's an existing resource file with the endpoint, you will add the API call there.</li>
-            <li>If not, you will need to create a new resource file.</li>
-            <li>Model this resource file after existing resources. Define the API call according to the swagger specifications.</li>
+            <li>Once you have opened the solution, </li>
+            <li>Make sure the client is connecting to the same topic as in your web job. </li>
+            <li>The setting for the Event solution is in Program.cs in the FireEventsForScorecardList function.</li>
+            <li>The location for the topic name for the Web Job may vary between web jobs, but usually can be found in App.config </li>
+          </ul>
+          <ul>
+            <li>Additionally, </li>
+            <li>Make sure the client is connecting to the same service bus as in your web job. </li>
+            <li>The setting for the Event solution is in Program.cs in the Constants.cs</li>
+            <li>The location for the Service Bus connection for the Web Job can usually can be found in App.config </li>
           </ul>
           <li>
-            Define a data structure in the resource file for the input & output payload of the API if more than one data type is needed.
+            Add a breakpoint in the *MessageHandler.cs file for the Web Job and run the specified Web Job. 
           </li>
-          <li>Add an epic reducer in the .ducks file that imports the resource and calls the API.</li>
-          <li>Combine the epic into the root epic in the .epics file.</li>
-          <li>The API call will now be made whenever the reducer is triggered.</li>
+          <li></li>
+          <li>With the Job running and breakpoint set,</li>
+          <li>Run the 'FireScorecardEvents' Solution.</li>
+          <li>If the breakpoint is hit, Congratulations, we have successfully received data!</li>
         </ol>
       </div>
       <hr />
-      <h2>Sample PR</h2>
+      <h2>Sample Repos</h2>
       <div>
         <ul>
-          Sample PRs for adding API calls to app-modules.
           <li>
-            <a href="https://experimentation.visualstudio.com/Analysis%20and%20Experimentation/_git/ExperimentationUI/pullrequest/93631"
-              >Pull Request 93631: [hypothesis] Link Metrics API to Hypothesis UX
-            </a>
-          </li>
-          <li>
-            <a href="https://experimentation.visualstudio.com/Analysis%20and%20Experimentation/_git/ExperimentationUI/pullrequest/98737"
-              >Pull Request 98737: [hypothesis]Link Analysis Templates API
+            <a href="https://experimentation.visualstudio.com/21fa5fbd-1bc8-4dc5-a421-77bc81fac831/_apis/git/repositories/e66f2bdd-a36d-43af-b98e-83aba7174a82/Items?path=/.attachments/FireScorecardEvents-1cd70287-bd5f-4fc0-8c10-4822181276a3.zip&download=false&resolveLfs=true&%24format=octetStream&api-version=5.0-preview.1&sanitize=true&versionDescriptor.version=wikiMaster"
+              >Fire Scorecard Events Repo
             </a>
           </li>
         </ul>

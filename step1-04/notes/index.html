@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EXP Bootcamp - Components</title>
+    <title>EXP Bootcamp - Receiving Data</title>
     <link rel="stylesheet" href="./style.css" />
 
     <style>
@@ -13,48 +13,56 @@
 
   <body>
     <section>
-      <h2>Components</h2>
-      Components are the basic pieces in a UX. Some component examples are TextField, SearchBox, DetailsList, etc. <br />
-      Our codebase uses FluentUI to import the basic components, such as TextField and SearchBox, but we also create our own components with
-      more specific functionality, such as DetailsListWithCommandBar. <br />
-      It is necessary to componentize each UX because:
-      <ul>
-        <li>It reduces duplicated code if a component is used twice or more.</li>
-        <li>It allows for easier development in the future when an existing component can be reused.</li>
-        <li>It ensures consistency across the entire UX.</li>
-      </ul>
-      Read documentation on components or browse existing components in the component playground before proceeding.
+      <h2>Service Bus & Service Bus Explorer</h2>
+      Service Bus is an integral type of Azure Resource that acts as Pub-Sub system. <br />
+       <br />
+      Download the Service Bus Explorer linked below 
+      which will be used to send messages to use in our Web Job. 
+
+      Then either create a new Service Bus or use the provided test environment 
+      Service Bus below. (Aptly named by its creators)
+
+      You will need to get the connection string to send messages.
+      To get this, enter the Shared access policies under the Settings Submenu 
+      in the left hand columnar menu on the Service Bus Resource in the Azure Portal. 
+
+      Copy the Primary Connection String for the RootManageSharedAccessKey Policy 
+      and use that string as the connection string in Azure Service Bus Explorer.
+
+      Now that you've sent Data, 
+      your Visual Studio window should hit the breakpoint we created in step 3!
+
+      Once you let this function finish, it should send a message to the 
+      'prodcompletedscorecardids' topic.
+
+      Nagivate back to the Service Bus Explorer. 
+      Note the Active Message Count. 
+      Refresh the topic and notice that the active message coutn has now increased to one. 
+
+      Congratulations we have sent and received data!
       <hr />
       <h2>Component Documentation</h2>
       <ul>
-        <li>Common components</li>
+        <li>Service Bus Explorer</li>
         <ul>
           <li>
-            <a href="https://dev.azure.com/experimentation/Analysis%20and%20Experimentation/_wiki/wikis/AnE.wiki/5619/Common-components"
-              >https://dev.azure.com/experimentation/Analysis%20and%20Experimentation/_wiki/wikis/AnE.wiki/5619/Common-components</a
+            <a href="https://experimentation.visualstudio.com/Analysis%20and%20Experimentation/_wiki/wikis/AnE.wiki/797/Service-Bus-Explorer"
+              >https://experimentation.visualstudio.com/Analysis%20and%20Experimentation/_wiki/wikis/AnE.wiki/797/Service-Bus-Explorer</a
             >
           </li>
         </ul>
-        <li>Component library</li>
+        <li>Dev Service Bus</li>
         <ul>
           <li>
-            <a href="https://dev.azure.com/experimentation/Analysis%20and%20Experimentation/_wiki/wikis/AnE.wiki/5532/UI-Component-Library"
-              >https://dev.azure.com/experimentation/Analysis%20and%20Experimentation/_wiki/wikis/AnE.wiki/5532/UI-Component-Library</a
+            <a href="https://ms.portal.azure.com/#@microsoft.onmicrosoft.com/resource/subscriptions/80d2c6c6-fa64-4ab1-8aa5-4e118c6b16ce/resourceGroups/nikhowlett-test/providers/Microsoft.ServiceBus/namespaces/nikharry/overview"
+              >https://ms.portal.azure.com/#@microsoft.onmicrosoft.com/resource/subscriptions/80d2c6c6-fa64-4ab1-8aa5-4e118c6b16ce/resourceGroups/nikhowlett-test/providers/Microsoft.ServiceBus/namespaces/nikharry/overview</a
             >
           </li>
         </ul>
-        <li>Component playground</li>
+        <li>Service Bus Documentation</li>
         <ul>
           <li>
-            <a href="https://playground-web-dev-wus.azurewebsites.net/">https://playground-web-dev-wus.azurewebsites.net/</a>
-          </li>
-        </ul>
-        <li>FluentUI components</li>
-        <ul>
-          <li>
-            <a href="https://developer.microsoft.com/en-us/fluentui#/controls/web/button"
-              >https://developer.microsoft.com/en-us/fluentui#/controls/web/button</a
-            >
+            <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/">https://docs.microsoft.com/en-us/azure/service-bus-messaging/</a>
           </li>
         </ul>
       </ul>
