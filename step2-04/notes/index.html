@@ -19,30 +19,31 @@
       <br />
 
       <br />
+      <ul>
        <li>Download the Service Bus Explorer linked below 
       which will be used to send messages to use in our Web Job. 
         </li>
         <li>Then either create a new Service Bus or use the provided test environment 
       Service Bus below. (Aptly named by its creators)
-</li>
+</li></ul>
+<br />
+<ul>
 <li>You will need to get the connection string to send messages.
       To get this, enter the Shared access policies under the Settings Submenu 
       in the left hand columnar menu on the Service Bus Resource in the Azure Portal. 
 </li>
 <li> Copy the Primary Connection String for the RootManageSharedAccessKey Policy 
       and use that string as the connection string in Azure Service Bus Explorer.
-
+<br/>
+</ul>
+<br />
+<ul>
+  <li>In AzureServiceBusExplorer, right click on the subscription of the topic that is mentioned in the WebJob either in Program.cs, App.config, or AzureSubscriptionMessageHandler.cs</li>
+  <li>Press Send message, and then start </li>
       <li>  Now that you've sent Data, 
       your Visual Studio window should hit the breakpoint we created in step 3!
     </li>
-      <li>Once you let this function finish, it should send a message to the 
-      'prodcompletedscorecardids' topic.
-    </li>
-      <li>Nagivate back to the Service Bus Explorer. 
-      Note the Active Message Count. 
-    </li><li>Refresh the topic and notice that the active message count has now increased to one. 
-    </li>
-      Congratulations we have sent and received data!
+  </ul>  Congratulations we have sent data to our WebJob which was successfully received!
       <hr />
       <h2>Component Documentation</h2>
       <ul>

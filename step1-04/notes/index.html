@@ -23,17 +23,20 @@
             
           </li>
           <ul>
+            <br />
             <ul>Make sure the client is connecting to the same topic as in your web job. 
             <li>The setting for the Event solution is in Program.cs in the FireEventsForScorecardList function.</li>
             <li>The location for the topic name for the Web Job may vary between web jobs, but usually can be found in App.config </li>
               </ul>
           </ul>
           <ul>
+            <br />
             <ul>Make sure the client is connecting to the same service bus as in your web job. 
             <li>The setting for the Event solution is in Program.cs in the Constants.cs</li>
             <li>The location for the Service Bus connection for the Web Job can usually can be found in App.config </li>
               </ul>
           </ul>
+          <br />
           <li>
             Add a breakpoint in the *MessageHandler.cs file for the Web Job and run the specified Web Job. 
           </li>

@@ -32,6 +32,7 @@
             <pre>
               IAsyncCollector<ServiceBusMessage> xCardViewClient)</pre>
           </li>
+          <br />
           Then to Receive that Data, 
           <br />
           Add the following function in Program.cs and set a breakpoint inside the function
@@ -46,6 +47,7 @@
                   </pre>
           <pre>}</pre>
                 </li>
+                <br />
                 Restart your web app,
                 <br />
                 and re-send a message to the topic with both the trigger and client, in this case 'xcardView' 
@@ -54,7 +56,7 @@
         Your breakpoint should hit, 
         <br />
         Congratulations, you have made your own Web Job that sends and receives data!
-        <hr />
+        
       
     </section>
     <hr />
