@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EXP Bootcamp - Setup an app-module</title>
+    <title>EXP Bootcamp - Web Job template</title>
     <link rel="stylesheet" href="./style.css" />
 
     <style>
@@ -13,28 +13,36 @@
 
   <body>
     <section>
-      <h2>Setup App-Module</h2>
+      <h2>Sample Web Job</h2>
       <div>
-        Setup
-        <ol>
-          <li>Copy the <code>_sample</code> app directory under <code>./app-modules/_sample</code></li>
-          <li>Rename the directory</li>
-          <li>Update the package name in the module's root package.json <code>"name": "@ane/[name]-app-module"</code></li>
-          <li>Install dependencies - in the root of the ExperimentationUI project, run <code>yarn bootstrap</code></li>
-        </ol>
-        You can now run your app-module by running <code>yarn start</code> in the app-module folder
-      </div>
-      <hr />
-      <h2>Sample PR</h2>
-      <div>
+        <h3>Module Repository</h3>
+        Use the <a href='https://github.com/nikhowlettMicrosoft/SampleWebJob'>sample</a> Web Job as a reference<br>
+        <br />
+        In the next step we will setup this Web Job. 
+        <br />
+        For now take a look through its contents.
+        <br />
         <ul>
-          <li>PR for setting up the Hypothesis app-module based off the sample</li>
-          <li>
-            <a href="https://experimentation.visualstudio.com/Analysis%20and%20Experimentation/_git/ExperimentationUI/pullrequest/90529"
-              >Pull Request 90529: [hypothesis] app module setup</a
-            >
-          </li>
+          <li>WebJobNameDirectory/</li>
+          <ul>
+            <li>Program.cs </li>
+            <li>App.config - Contains Connection Strings & other Settings</li>
+            <li>UnityConfig.cs - Instantiates common elements like DataStore(s) and HtmlClient(s)</li>
+            <li>AzureSubscriptionMessageHandler - Contains logic to handle Service Bus Messages</li>
+          </ul>
         </ul>
+  
+      
+        <h3>A Web Job's surface level actions can be viewed in Program.cs</h3>
+        <ul>
+          <li>From this file you can tell</li> 
+          <ul>
+            <li>Which configurations are used and set</li>
+            <li>Which services and files will be used</li>
+          </ul>
+        </ul>
+
+      
       </div>
     </section>
     <hr />

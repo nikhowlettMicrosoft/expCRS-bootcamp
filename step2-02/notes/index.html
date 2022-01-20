@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EXP Bootcamp - Web Job template</title>
+    <title>EXP Bootcamp - Setup a WebJob</title>
     <link rel="stylesheet" href="./style.css" />
 
     <style>
@@ -13,30 +13,27 @@
 
   <body>
     <section>
-      <h2>Sample Web Job</h2>
+      <h2>Setup WebJob</h2>
       <div>
-        <h3>A Web Job's surface level actions can be viewed in Program.cs</h3>
+        Setup
+        <ol>
+          <li>Ensure the Service Bus Connection String is set in app.config</code></li>
+          <li>Ensure the topic and subscription values in Receiver.cs match the available topics in ServiceBusExplorer </li>
+          <li>Right click on the WebJob in the Solution Explorer and Build</li>
+          </ol>
+        You can now run your WebJob by setting your WebJob as Startup Project and then running, or right-clicking and then debugging the WebJob.
+      </div>
+      <hr />
+      <h2>Sample PR</h2>
+      <div>
         <ul>
-          <li>From this file you can tell</li> 
-          <ul>
-            <li>Which configurations are used and set</li>
-            <li>Which services and files will be used</li>
-          </ul>
+          <li>PR for setting up the Hypothesis app-module based off the sample</li>
+          <li>
+            <a href="https://experimentation.visualstudio.com/Analysis%20and%20Experimentation/_git/ExperimentationUI/pullrequest/90529"
+              >Pull Request 90529: [hypothesis] app module setup</a
+            >
+          </li>
         </ul>
-
-      <h3>Module Repository</h3>
-      Use the <a href='https://github.com/nikhowlettMicrosoft/SampleWebJob'>_sample</a> Web Job as a reference<br>
-      
-      <ul>
-        <li>WebJobNameDirectory/</li>
-        <ul>
-          <li>Program.cs </li>
-          <li>App.config `- Contains `</li>
-          <li>UnityConfig.cs `- Instantiates common elements like DataStore(s) and HtmlClient(s)`</li>
-          <li>AzureSubscriptionMessageHandler `- Contains logic to handle Service Bus Messages`</li>
-        </ul>
-      </ul>
-
       </div>
     </section>
     <hr />
