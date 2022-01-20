@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EXP Bootcamp - Receiving Data In PPE Environment</title>
+    <title>EXP Bootcamp - Receiving Data</title>
     <link rel="stylesheet" href="./style.css" />
 
     <style>
@@ -13,47 +13,59 @@
 
   <body>
     <section>
-      <h2>Send a Service Bus Message</h2>
-      <div>
-        Steps to send data to our Web Jobs
-        <ol>
-          <li>
-            First we will need a Visual Studio Solution to fire scorecard events.
-            The repo is linked below.
-            
-          </li>
-          <ul>
-            <li>Once you have opened the solution, </li>
-            <li>Make sure the client is connecting to the same topic as in your web job. </li>
-            <li>The setting for the Event solution is in Program.cs in the FireEventsForScorecardList function.</li>
-            <li>The location for the topic name for the Web Job may vary between web jobs, but usually can be found in App.config </li>
-          </ul>
-          <ul>
-            <li>Additionally, </li>
-            <li>Make sure the client is connecting to the same service bus as in your web job. </li>
-            <li>The setting for the Event solution is in Program.cs in the Constants.cs</li>
-            <li>The location for the Service Bus connection for the Web Job can usually can be found in App.config </li>
-          </ul>
-          <li>
-            Add a breakpoint in the *MessageHandler.cs file for the Web Job and run the specified Web Job. 
-          </li>
-          <li></li>
-          <li>With the Job running and breakpoint set,</li>
-          <li>Run the 'FireScorecardEvents' Solution.</li>
-          <li>If the breakpoint is hit, Congratulations, we have successfully received data!</li>
-        </ol>
-      </div>
+      <h2>Service Bus & Service Bus Explorer</h2>
+      Service Bus is an integral type of Azure Resource that acts as Pub-Sub system. <br />
+       <br />
+       <li>Download the Service Bus Explorer linked below 
+      which will be used to send messages to use in our Web Job. 
+        </li>
+        <li>Then either create a new Service Bus or use the provided test environment 
+      Service Bus below. (Aptly named by its creators)
+</li>
+<li>You will need to get the connection string to send messages.
+      To get this, enter the Shared access policies under the Settings Submenu 
+      in the left hand columnar menu on the Service Bus Resource in the Azure Portal. 
+</li>
+<li> Copy the Primary Connection String for the RootManageSharedAccessKey Policy 
+      and use that string as the connection string in Azure Service Bus Explorer.
+
+      <li>  Now that you've sent Data, 
+      your Visual Studio window should hit the breakpoint we created in step 3!
+    </li>
+      <li>Once you let this function finish, it should send a message to the 
+      'prodcompletedscorecardids' topic.
+    </li>
+      <li>Nagivate back to the Service Bus Explorer. 
+      Note the Active Message Count. 
+    </li><li>Refresh the topic and notice that the active message coutn has now increased to one. 
+    </li>
+      Congratulations we have sent and received data!
       <hr />
-      <h2>Sample Repos</h2>
-      <div>
+      <h2>Component Documentation</h2>
+      <ul>
+        <li>Service Bus Explorer</li>
         <ul>
           <li>
-            <a href="https://experimentation.visualstudio.com/21fa5fbd-1bc8-4dc5-a421-77bc81fac831/_apis/git/repositories/e66f2bdd-a36d-43af-b98e-83aba7174a82/Items?path=/.attachments/FireScorecardEvents-1cd70287-bd5f-4fc0-8c10-4822181276a3.zip&download=false&resolveLfs=true&%24format=octetStream&api-version=5.0-preview.1&sanitize=true&versionDescriptor.version=wikiMaster"
-              >Fire Scorecard Events Repo
-            </a>
+            <a href="https://experimentation.visualstudio.com/Analysis%20and%20Experimentation/_wiki/wikis/AnE.wiki/797/Service-Bus-Explorer"
+              >https://experimentation.visualstudio.com/Analysis%20and%20Experimentation/_wiki/wikis/AnE.wiki/797/Service-Bus-Explorer</a
+            >
           </li>
         </ul>
-      </div>
+        <li>Dev Service Bus</li>
+        <ul>
+          <li>
+            <a href="https://ms.portal.azure.com/#@microsoft.onmicrosoft.com/resource/subscriptions/80d2c6c6-fa64-4ab1-8aa5-4e118c6b16ce/resourceGroups/nikhowlett-test/providers/Microsoft.ServiceBus/namespaces/nikharry/overview"
+              >https://ms.portal.azure.com/#@microsoft.onmicrosoft.com/resource/subscriptions/80d2c6c6-fa64-4ab1-8aa5-4e118c6b16ce/resourceGroups/nikhowlett-test/providers/Microsoft.ServiceBus/namespaces/nikharry/overview</a
+            >
+          </li>
+        </ul>
+        <li>Service Bus Documentation</li>
+        <ul>
+          <li>
+            <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/">https://docs.microsoft.com/en-us/azure/service-bus-messaging/</a>
+          </li>
+        </ul>
+      </ul>
     </section>
     <hr />
   </body>
