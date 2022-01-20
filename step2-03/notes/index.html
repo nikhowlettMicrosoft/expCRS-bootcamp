@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EXP Bootcamp - Adding components</title>
+    <title>EXP Bootcamp - Adding Logic</title>
     <link rel="stylesheet" href="./style.css" />
 
     <style>
@@ -19,25 +19,43 @@
       <h2>Sample PR</h2>
       <div>
         <ul>
-          Sample PRs for adding components to app-modules.
+          To send & receive data in the WebJob, we will replace the RunView Method Header in Program.cs with the following:
           <li>
-            <a href="https://experimentation.visualstudio.com/Analysis%20and%20Experimentation/_git/ExperimentationUI/pullrequest/90709"
-              >Pull Request 90709: [hypothesis]Hypothesis UX TextFields
-            </a>
+            <pre>public static async Task RunView(
+              </pre>
+            <pre>
+              [ServiceBusTrigger(topicName: "xcardView", subscriptionName: "ViewCall", Connection = "ServiceBus")] ServiceBusReceivedMessage thisMessage,    
+            </pre>
+            <pre>
+              [ServiceBus("prodcompletedscorecardids", entityType: ServiceBusEntityType.Topic, Connection = "ServiceBus")]
+          </pre>
+            <pre>
+              IAsyncCollector<ServiceBusMessage> xCardViewClient)</pre>
           </li>
+          Then to Receive that Data, 
+          <br />
+          Add the following function in Program.cs and set a breakpoint inside the function
           <li>
-            <a href="https://experimentation.visualstudio.com/Analysis%20and%20Experimentation/_git/ExperimentationUI/pullrequest/93169"
-              >Pull Request 93169: [hypothesis]Added Metrics List
-            </a>
-          </li>
+            <pre>public async Task RunReceive(
+              </pre>
+              <pre>[ServiceBusTrigger(topicName: "prodcompletedscorecardids", subscriptionName: "ViewCall", Connection = "ServiceBus")] ServiceBusReceivedMessage thisMessage)
+                </pre>
+                <pre>{
+                  </pre>
+                  <pre>var receivedData = thisMessage;
+                  </pre>
+          <pre>}</pre>
+                </li>
+                Restart your web app,
+                <br />
+                and re-send a message to the topic with both the trigger and client, in this case 'xcardView' 
+                <br /> from the AzureServiceBusExplorer
         </ul>
+        Your breakpoint should hit, 
+        <br />
+        Congratulations, you have made your own Web Job that sends and receives data!
         <hr />
-      <h2>Documentation</h2>
-      <div>
-        <ul>
-          <li><a href="https://dev.azure.com/experimentation/Analysis%20and%20Experimentation/_wiki/wikis/AnE.wiki/5630/DetailsList">DetailsList component documentation</a></li>
-        </ul>
-      </div>
+      
     </section>
     <hr />
   </body>
