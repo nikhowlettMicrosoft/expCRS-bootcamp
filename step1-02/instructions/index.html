@@ -17,9 +17,30 @@
       <div>
         First download the Consumption Web Jobs repo linked below.
         <br />
-        After downloading the repo linked below, paste the app.config from the last step,
+        After downloading the repo linked below, we will need to chose a WebJob. 
         <br />
-        and 
+        Open the solution file found in the src directory.
+        <br />
+        In the visual studio solution explorer, 
+        investigate each web Job and find one that contains a file called 
+        'AzureSubscriptionMessageHandler'. 
+        <br />
+        This file ensures that we will be 
+        sending & receiving data with this Web Job so that we can test your setup
+        in the upcoming steps. 
+        <br />
+        After chosing a WebJob, paste the 'exe.config' 
+        file 
+        from the last step
+        into app.config
+        <br />
+        This step provides the WebJob 
+        with the required connection strings 
+        to connect to the Azure resources like the 
+        Queues, Blobs, ServiceBus, and more. 
+        
+        <br />
+        Now,
         build the solution.
         </ul>
       </div>
