@@ -18,7 +18,7 @@ The first day provides an introduction to setting up the Exp CRS locally and the
 
 ### Day one
 
-Day one covers setting up the UX locally, and the basic technologies that the WebJobs are built on.
+Day one covers setting up CRS locally, and the basic technologies that the WebJobs are built on.
 
 1. [Install Libraries](step1-01)
 2. [Build the CRS Locally](step1-02)
