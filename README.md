@@ -1,12 +1,12 @@
-# Exp UX Bootcamp
+# Exp CRS Bootcamp
 
 > 🚨🚨 This project is a work in progress! Issues and pull requests are encouraged. 🚨🚨
 
 ## Welcome
 
-In this two-day workshop you'll learn the basics of Exp team frontend development while building a working app-module.
+In this two-day workshop you'll learn the basics of ExP team Rest Service Development while building a working WebJob.
 
-The first day provides an introduction to setting up the Exp UX locally and the technologies used. This is targeted at new and experienced developers alike. On the second day we'll build a sample app-module, which is the building block of the Exp UX.
+The first day provides an introduction to setting up the Exp CRS locally and the technologies used. This is targeted at new and experienced developers alike. On the second day we'll build a sample WebJob, which is the building block of the ExP Consumption Rest Services.
 
 ### Lesson Structure
 
@@ -21,32 +21,36 @@ The first day provides an introduction to setting up the Exp UX locally and the 
 Day one covers setting up the UX locally, and the basic technologies that the UX is built on.
 
 1. [Install Libraries](step1-01)
-2. [Build the UX Locally](step1-02)
-3. [Intro to App-Modules](step1-03)
-4. [Standard Components](step1-04)
-5. [Intro to Redux and Epics](step1-05)
+2. [Build the CRS Locally](step1-02)
+3. [Intro to WebJobs](step1-03)
+4. [Sending & Receiving Data](step1-04)
+5. [Intro to ARM and EV2](step1-05)
 
 ### Day two
 
-Day two applies the previous lessons to guide you through building your own app-module based off a template.
+Day two applies the previous lessons to guide you through building your own WebJob based off a template.
 
-1. [Setup a new App-Module](step2-01)
-2. [Sample App-Module Template](step2-02)
-3. [Adding Components](step2-03)
-4. [API Calls](step2-04)
-5. [Routing](step2-05)
-6. [Finish Implementation](step2-06)
+1. [Setup a new WebJob](step2-01)
+2. [Sample WebJob Template](step2-02)
+3. [Adding Logic](step2-03)
+4. [Testing your WebJob](step2-04)
+5. [Test in Pre-Prod](step2-05)
+6. [View Logs](step2-06)
 
 ### Bonus content
 
-- [Testing with Jest](bonus-jest)
+- [EV2 Tutorial](https://ev2docs.azure.net/overview/tutorial.html)
 
 ## Additional resources
 
-- [MDN Web Docs](https://developer.mozilla.org/en-US/)
-- [React Docs](https://reactjs.org/docs/getting-started.html)
-- [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
+- [MSFT WebJob Docs](https://azure.microsoft.com/en-us/blog/webjobs-goes-into-full-production/)
+- [.NET Docs](https://docs.microsoft.com/en-us/dotnet/)
 
 ## Thanks for Reading!
 
-This page was built by Jack Bloomfeld during Fix Hack Learn week. I'm hoping to improve the onboarding experience for anyone new to UX. Feel free to reach out with any comments or feedback.
+This page was built by Nik Howlett during Fix Hack Learn week. I'm hoping to improve the onboarding experience for anyone new to CRS. Feel free to reach out with any comments or feedback.
+
+Built with the UX Bootcamp, Frontend Bootcamp Templates
+https://jabloomf.github.io/expUX-bootcamp/
+https://microsoft.github.io/frontend-bootcamp/
+https://jabloomf.github.io/bootcamp-template/
