@@ -22,17 +22,7 @@
         <br />
         For now take a look through its contents.
         <br />
-        <ul>
-          <li>WebJobNameDirectory/</li>
-          <ul>
-            <li>Program.cs </li>
-            <li>App.config - Contains Connection Strings & other Settings</li>
-            <li>UnityConfig.cs - Instantiates common elements like DataStore(s) and HtmlClient(s)</li>
-            <li>AzureSubscriptionMessageHandler - Contains logic to handle Service Bus Messages</li>
-          </ul>
-        </ul>
-  
-      
+        
         <h3>A Web Job's surface level actions can be viewed in Program.cs</h3>
         <ul>
           <li>From this file you can tell</li> 
@@ -41,8 +31,15 @@
             <li>Which services and files will be used</li>
           </ul>
         </ul>
-
-      
+        <ul>
+          <li>WebJobNameDirectory/</li>
+          <ul>
+            <li>Program.cs </li>
+            <li>App.config - Contains Connection Strings & other Settings</li>
+            <li>UnityConfig.cs - Instantiates common elements like DataStore(s) and HtmlClient(s)</li>
+            <li>Receiver.cs (same functionality as *MessageHandler in day 1) - Contains logic to handle Service Bus Messages</li>
+          </ul>
+        </ul>      
       </div>
     </section>
     <hr />

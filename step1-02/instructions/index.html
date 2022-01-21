@@ -15,36 +15,68 @@
     <section>
       <h2>Build a Web Job Locally</h2>
       <div>
-        First download the Consumption Web Jobs repo linked below.
+        <ul>
+        <li>First download the Consumption Web Jobs repo linked below.</li>
         <br />
         After downloading the repo linked below, we will need to chose a WebJob. 
         <br />
-        Open the solution file found in the src directory.
+        <li> Open the solution file found in the src directory. </li>
         <br />
-        In the visual studio solution explorer, 
+        <li>In the visual studio solution explorer, 
         investigate each web Job and find one that contains a file called 
-        'AzureSubscriptionMessageHandler'. 
+        'AzureSubscriptionMessageHandler'. </li> 
         <br />
         This file ensures that we will be 
         sending & receiving data with this Web Job so that we can test your setup
-        in the upcoming steps. 
+        in the upcoming steps.
+      </ul> 
         <br />
-        After chosing a WebJob, paste the 'exe.config' 
+        <ul>
+        <li>After chosing a WebJob, paste the 'exe.config' 
         file 
         from the last step
-        into app.config
+        into app.config</li>
         <br />
         This step provides the WebJob 
         with the required connection strings 
         to connect to the Azure resources like the 
         Queues, Blobs, ServiceBus, and more. 
-        
+      
         <br />
         Now,
         build the solution.
         </ul>
       </div>
+    </section>
+    <section>
+      In the upcoming steps we will test out the WebJob by sending and receiving data. 
+      For now take a look through its contents.
+        <br />
+        <h3>A Web Job's surface level actions can be viewed in Program.cs</h3>
+        <ul>
+          <li>From this file you can tell</li> 
+          <ul>
+            <li>Which configurations are used and set</li>
+            <li>Which services and files will be used</li>
+          </ul>
+        </ul>
+
+        <ul>
+          <li>WebJobNameDirectory/</li>
+          <ul>
+            <li>Program.cs </li>
+            <li>App.config - Contains Connection Strings & other Settings</li>
+            <li>UnityConfig.cs - Instantiates common elements like DataStore(s) and HtmlClient(s)</li>
+            <li>*MessageHandler.cs - Contains logic to handle Service Bus Messages</li>
+          </ul>
+        </ul>
+  
+      
+
+    </section>
+    <section>
       <div>
+
       <h2>WebJobs Repo: </h2>
         <li>
           <a href="https://experimentation.visualstudio.com/Analysis%20and%20Experimentation/_git/AnE.ExP.ConsumptionWebJobs"
